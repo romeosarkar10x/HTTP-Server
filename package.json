@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/romeosarkar10x/HTTP-Server/issues"
   },
-  "homepage": "https://github.com/romeosarkar10x/HTTP-Server#readme"
+  "homepage": "https://github.com/romeosarkar10x/HTTP-Server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

@@ -1,13 +1,11 @@
 const express = require("express");
-const serverless = require("serverless-http");
+// const serverless = require("serverless-http");
 
 
 const app = express();
-// const Port = 8000;
+const Port = 8080;
 
-// app.listen(Port, _ => {
-//   console.log("app running on Port", Port);
-// });
+
 const Status = {
   safe: true
 };
@@ -41,5 +39,10 @@ router.post("/", (request, response) => {
 
 
 
-app.use("/.netlify/functions/server", express.json(), router);
-module.exports.handler = serverless(app);
+app.use("/", express.json(), router);
+// app.listen();
+// module.exports.handler = serverless(app);
+
+app.listen(Port, _ => {
+  console.log("app running on Port", Port);
+});
